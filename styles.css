@@ -1,0 +1,71 @@
+:root {
+    --bg-color: #1a1a1a;
+    --canvas-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Using CSS Grid for responsive layout */
+.game-container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#game-canvas {
+    display: block;
+    box-shadow: var(--canvas-shadow);
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Media queries for better responsiveness */
+@media (max-width: 480px) {
+    #game-canvas {
+        border-radius: 4px;
+    }
+}
+
+/* High contrast mode for accessibility */
+@media (prefers-contrast: high) {
+    :root {
+        --bg-color: #000;
+        --canvas-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    }
+    
+    #game-canvas {
+        border: 2px solid white;
+    }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    #game-canvas {
+        transition: none;
+    }
+}

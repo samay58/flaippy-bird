@@ -1,0 +1,19 @@
+{
+  "name": "Flaippy Bird",
+  "short_name": "Flaippy",
+  "description": "A modern interpretation of the classic Flappy Bird game",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["games", "entertainment"],
+  "screenshots": []
+}

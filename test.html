@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Flaippy Bird - A modern interpretation of the classic Flappy Bird game">
+    <meta name="theme-color" content="#1a1a1a">
+    <title>Flaippy Bird - Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for modern UI -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Nunito:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- GSAP animation library for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <canvas id="game-canvas"></canvas>
+    </div>
+    <script type="module">
+        import Game from './src/Game.js';
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize the game
+            const game = new Game('game-canvas');
+            
+            // Add console debug
+            console.log("Game initialized with retro UI enhancements");
+        });
+    </script>
+</body>
+</html>
